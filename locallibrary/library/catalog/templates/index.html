@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}<title>Inside Library</title>{% endblock %}
+{% block content %}
+  <h2>Summary</h2>
+  <p>The library has the following record counts:</p>
+  <ul>
+    <li><strong>Books:</strong> {{ total_books }}</li>
+    <li><strong>Copies:</strong> {{ all_instances }}</li>
+    <li><strong>Copies available:</strong> {{ available_instances }}</li>
+    <li><strong>Authors:</strong> {{ total_authors }}</li>
+    <li><strong>Comics:</strong> {{ comic_books }}</li>
+  </ul>
+{% endblock %}

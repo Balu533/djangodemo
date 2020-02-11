@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="validate_login" method="POST">
+  {% csrf_token %}
+<table border="0" align="center">
+<tbody>
+
+<tr>
+  <td><label>Username: </label></td>
+  <td><input id="name" maxlength="50" name="uname" type="text" /></td>
+</tr>
+
+<tr>
+  <td><label>Password:</label></td>
+  <td><input id="password" maxlength="50" name="password" type="password" /></td>
+</tr>
+
+<tr>
+  <td><input name="Submit" type="Submit" value="Login" /></td>
+  <td>New User? <a href="register_new">Register Here</a></td>
+</tr>
+
+</tbody>
+</table>
+</form>
+
+<div>
+
+  {% for message in messages %}
+  <p>{{ message }}</p>
+  {% endfor %}
+
+</div>
+{% endblock %}
